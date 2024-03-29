@@ -53,13 +53,22 @@
       <p class="lead mb-4">Somos una empresa enfocada en brindar servicios de calidad para satisfacer las necesidades de nuestros clientes. Nuestra visión es ser la mejor opción en el mercado brindando servicios óptimos, enfocados en la mejora continua, calidad en el servicio y tiempo de respuesta para nuestros clientes.
       </p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Cotizar</button>
+        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#formularioCotizacion">Cotizar</button>
         <button type="button" class="btn btn-outline-secondary btn-lg px-4">Contactáctanos</button>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
     <div class="overflow-hidden" style="max-height: 30vh;">
       <div class="container px-5">
-        <img src="./transporte_ejecutivo-100.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+        <img src="./transporte_ejecutivo-100.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="transorte" width="700" height="500" loading="lazy">
       </div>
     </div>
   </div>
@@ -112,13 +121,13 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./van-sprinter.jpg" class="d-block w-100" alt="family" height="900">
+          <img src="./van-sprinter.jpg" class="d-block w-100" alt="van">
         </div>
         <div class="carousel-item">
-          <img src="./conductor-audi.jpg" class="d-block w-100" alt="couple" height="900">
+          <img src="./conductor-audi.jpg" class="d-block w-100" alt="conductor">
         </div>
         <div class="carousel-item">
-          <img src="./camioneta.jpeg" class="d-block w-100" alt="dog" height="900">
+          <img src="./camioneta.jpeg" class="d-block w-100" alt="camioneta">
         </div>
         
       </div>
@@ -246,6 +255,10 @@
     </div>
   </div>
 
+  <div class="d-flex justify-content-center my-4">
+    <img src="chofer.jpg" class="img-fluid" alt="chofer">
+  </div>
+
   <div class="container px-4 py-5" id="hanging-icons">
     <h2 class="pb-2 border-bottom" id="ventajas">Ventajas</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
@@ -298,6 +311,46 @@
     </div>
   </div>
 
+
+
+  <!-- Modal de Cotización -->
+<div class="modal fade" id="formularioCotizacion" tabindex="-1" aria-labelledby="formularioCotizacionLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="formularioCotizacionLabel">Cotización</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Formulario -->
+        <form id="formCotizacion" action="https://formspree.io/f/meqyrzqd" method="POST">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="name" placeholder="Ingresa tu nombre">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com">
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="message" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+
+  
+
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary" form="formCotizacion">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <div class="container">
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
       <div class="col mb-3">
@@ -321,6 +374,8 @@
           <li class="nav-item mb-2"><a href="#ventajas" class="nav-link p-0 text-body-secondary">Ventajas</a></li>
         </ul>
       </div>
+
+
   
     </footer>
   </div>
