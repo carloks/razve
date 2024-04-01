@@ -13,6 +13,26 @@
       height: 4rem;
       border-radius: 0.75rem;
     }
+
+    
+    /* Media query para dispositivos pequeños */
+    @media (max-width: 768px) {
+      .card-img-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .card-img-top { /* Clase para posicionar la imagen arriba */
+      object-fit: cover;
+      object-position: top; /* Asegura que la parte superior de la imagen se muestre */
+      }
+    }
+    
   </style>
 </head>
 
@@ -308,15 +328,14 @@
     </div>
   </div>
 
-  <div class="container my-5">
+  <div class="container px-4 py-5">
     <div class="card text-bg-dark">
-      <img src="vip.webp" class="card-img img-fluid" alt="Background" style="opacity: 0.5;"> <!-- Agregado img-fluid -->
+      <img src="taxi.jpg" class="card-img card-img-top img-fluid" alt="Background" style="opacity: 0.5;"> <!-- Agregado img-fluid -->
       <div class="card-img-overlay d-flex flex-column justify-content-center">
         <div class="container text-center">
           <h2 id="contacto" class="display-6 fw-bold text-white" style="text-shadow: 0px 2px 4px #000000">Contacto</h2><br>
           <p class="fs-4 text-white mb-4" style="text-shadow: 0px 2px 4px #000000">
-            Bríndenos la oportunidad de colaborar con usted y su empresa.<br>
-            Estamos comprometidos a satisfacer sus requisitos con la más alta dedicación y excelencia.
+            Permítanos colaborar con su empresa; nuestro compromiso es atender sus requerimientos con dedicación y excelencia.
           </p>
           <div class="d-flex flex-wrap justify-content-center"> <!-- Ajustes para responsividad -->
             <!-- Botón de email -->
