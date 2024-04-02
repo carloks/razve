@@ -14,25 +14,24 @@
       border-radius: 0.75rem;
     }
 
-    
-    /* Media query para dispositivos pequeños */
+    .texto-responsivo {
+      font-size: 1.25rem; /* 20px si el tamaño base es 16px */
+    }
+
+    /* Ajustar el tamaño del texto para pantallas medianas */
     @media (max-width: 768px) {
-      .card-img-overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .card-img-top { /* Clase para posicionar la imagen arriba */
-      object-fit: cover;
-      object-position: top; /* Asegura que la parte superior de la imagen se muestre */
+      .texto-responsivo {
+        font-size: 1rem; /* 16px */
       }
     }
-    
+
+    /* Ajustar el tamaño del texto para pantallas pequeñas (móviles) */
+    @media (max-width: 576px) {
+      .texto-responsivo {
+        font-size: 0.875rem; /* 14px */
+      }
+    }
+
   </style>
 </head>
 
@@ -184,7 +183,7 @@
       <div class="col">
         <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('turismo.jpg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="text-shadow: 0px 2px 4px #000000">Servicio Escolar de Turismo</h3>
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="text-shadow: 0px 2px 4px #000000">Servicio Escolar y de Turismo</h3>
             
           </div>
         </div>
@@ -334,17 +333,24 @@
       <div class="card-img-overlay d-flex flex-column justify-content-center">
         <div class="container text-center">
           <h2 id="contacto" class="display-6 fw-bold text-white" style="text-shadow: 0px 2px 4px #000000">Contacto</h2><br>
-          <p class="fs-4 text-white mb-4" style="text-shadow: 0px 2px 4px #000000">
+
+          <p class="texto-responsivo text-white mb-4" style="text-shadow: 0px 2px 4px #000000">
             Permítanos colaborar con su empresa; nuestro compromiso es atender sus requerimientos con dedicación y excelencia.
           </p>
+
+          
           <div class="d-flex flex-wrap justify-content-center"> <!-- Ajustes para responsividad -->
             <!-- Botón de email -->
+
             <a href="mailto:veraconsulting24@gmail.com" class="btn btn-primary btn-lg m-2" style="background-color: #23507b;"> <!-- Agregado m-2 -->
-              <img src="envelope.png" alt="Email" class="img-fluid" style="width: 24px; height: 24px;"> veraconsulting24@gmail.com
+              <img src="envelope.png" alt="Email" class="img-fluid" style="width: 24px; height: 24px;">
+              <span class="texto-responsivo">razvetransportes@gmail.com</span>
             </a>
+            
             <!-- Botón de WhatsApp -->
             <a href="https://wa.me/524423502219" class="btn btn-primary btn-lg m-2" style="background-color: #5bd387;"> <!-- Agregado m-2 -->
-              <img src="whatsapp.png" alt="WhatsApp" class="img-fluid" style="width: 24px; height: 24px;"> 442 3 50 22 19
+              <img src="whatsapp.png" alt="WhatsApp" class="img-fluid" style="width: 24px; height: 24px;"> 
+              <span class="texto-responsivo">442 350 22 19</span>
             </a>
           </div>
         </div>
